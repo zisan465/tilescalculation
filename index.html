@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;700&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 onclick="document.getElementById('historylist').style.display = 'flex'">Tiles Calculation</h1>
+            <input type="text" class="productSearch" placeholder="Product Search.." id="productSearch">
+            <span class="clear-button" onclick="document.getElementById('productSearch').value = '';">❌</span>
+            <label for="box">Box</label>
+            <input type="number" placeholder="BOX" id="box"> 
+            <label for="sqrfeet">SQR Feet</label>
+            <input type="number" placeholder="SQR Feet" id="sqrfeet">
+            <label for="pcs">PCS</label>
+            <input type="number" placeholder="PCS" id="pcs"> 
+            <label for="amount">Amount</label>
+            <input type="number" placeholder="Amount" id="amount">
+            <input type="button" value="SUBMIT" id="submit" style="background-color: rgb(21, 88, 143); color: white; cursor: pointer; ">
+        </div>
+        <div class="body">
+            <div class="tableHeader">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>SL</td>
+                            <td>Name</td>
+                            <td>BOX</td>
+                            <td>SQR Feet</td>
+                            <td>Amount</td>
+                        </tr>
+                    </thead>
+                    <tbody id="addtablebody">
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2" onclick="window.print()" style="cursor: pointer;">Total</td>
+                            <td id="totalbox"></td>
+                            <td id="totalsqrfeet"></td>
+                            <td id="totalamount"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="productlist" id="productlist">
+        <ul class="ullist">
+        </ul>
+    </div>
+    <div class="productlist historylist" id="historylist">
+        <ul>
+            <li>Date</li>
+            <li>Date</li>
+            <li>Date</li>
+        </ul> 
+        <span style="position: absolute;top: 0; margin: 10px;right: 0;" onclick="document.getElementById('historylist').style.display = 'none'; ">❌</span>
+    </div>
+    <script src="Product.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
