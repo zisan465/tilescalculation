@@ -1,6 +1,7 @@
 body{
     font-family: 'Hind Siliguri', sans-serif;
 font-family: 'Ubuntu', sans-serif;
+    position:relative; 
 }
 .container{
     max-width: 800px;
@@ -84,8 +85,8 @@ tbody tr:hover {
     max-width: 800px;
     height: 300px;
     background-color: #0000009f;
-    position: fixed;
-    top: 50%;
+    position: absolute;
+    top: 58%;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow-y: scroll;
