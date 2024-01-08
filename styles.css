@@ -44,7 +44,7 @@ font-family: 'Ubuntu', sans-serif;
   }
   .clear-button {
     position: absolute;
-    top: 23.5%;
+    top: 34.5%;
     right: 9px;
     transform: translateY(-50%);
     cursor: pointer;
