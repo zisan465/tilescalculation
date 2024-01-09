@@ -11,10 +11,8 @@ const productSearch = document.getElementById('productSearch'),
       addtablebody = document.getElementById('addtablebody');
 
 let applesPerBox = 0,
-    squareFeetPerApple = 0,
+    squareFeetPerBox = 0, // Change the variable name to squareFeetPerBox
     pricePerSquareFeet = 0;
-
-
 
 //Product Search here
 productSearch.addEventListener('input',()=>{
@@ -40,7 +38,7 @@ productSearch.addEventListener('input',()=>{
     productSearch.value = item.innerText.trimStart();
 
      applesPerBox = findProductDetailsByName(item.innerText).pcs
-    squareFeetPerApple = findProductDetailsByName(item.innerText).sqrfeet
+    squareFeetPerBox = findProductDetailsByName(item.innerText).sqrfeet
     pricePerSquareFeet = findProductDetailsByName(item.innerText).amount
 
   });
@@ -105,21 +103,19 @@ function submitForm(){
 function calculateAppleInfo(amount, boxCount, squareFeet, pcs) {
     if (amount !== undefined && boxCount === undefined && squareFeet === undefined && pcs === undefined) {
         squareFeet = amount / pricePerSquareFeet;
-        pcs = Math.floor(squareFeet / squareFeetPerApple);
+        pcs = Math.floor(squareFeet / (applesPerBox * squareFeetPerBox)); // Adjust the calculation
         boxCount = Math.floor(pcs / applesPerBox);
     } else if (boxCount !== undefined && squareFeet === undefined && pcs === undefined) {
-        squareFeet = boxCount * applesPerBox * squareFeetPerApple;
+        squareFeet = boxCount * applesPerBox * squareFeetPerBox; // Adjust the calculation
         pcs = boxCount * applesPerBox;
         amount = squareFeet * pricePerSquareFeet;
 
-
-        
     } else if (squareFeet !== undefined && pcs === undefined && boxCount === undefined) {
-        pcs = Math.floor(squareFeet / squareFeetPerApple);
+        pcs = Math.floor(squareFeet / squareFeetPerBox); // Adjust the calculation
         boxCount = Math.floor(pcs / applesPerBox);
         amount = squareFeet * pricePerSquareFeet;
     } else if (pcs !== undefined && squareFeet === undefined && boxCount === undefined) {
-        squareFeet = pcs * squareFeetPerApple;
+        squareFeet = pcs * squareFeetPerBox; // Adjust the calculation
         boxCount = Math.floor(pcs / applesPerBox);
         amount = squareFeet * pricePerSquareFeet;
     } else {
@@ -133,7 +129,8 @@ function calculateAppleInfo(amount, boxCount, squareFeet, pcs) {
         pcs: pcs,
         amount: amount
     };
-};
+}
+
 
 
 
