@@ -103,19 +103,19 @@ function submitForm(){
 function calculateAppleInfo(amount, boxCount, squareFeet, pcs) {
     if (amount !== undefined && boxCount === undefined && squareFeet === undefined && pcs === undefined) {
         squareFeet = amount / pricePerSquareFeet;
-        pcs = Math.floor(squareFeet / (applesPerBox * squareFeetPerBox)); // Adjust the calculation
+        pcs = Math.floor(squareFeet / (squareFeetPerBox/ applesPerBox ));  // Adjust the calculation
         boxCount = Math.floor(pcs / applesPerBox);
     } else if (boxCount !== undefined && squareFeet === undefined && pcs === undefined) {
-        squareFeet = boxCount * applesPerBox * squareFeetPerBox; // Adjust the calculation
+        squareFeet = boxCount  * squareFeetPerBox; // Adjust the calculation
         pcs = boxCount * applesPerBox;
         amount = squareFeet * pricePerSquareFeet;
 
     } else if (squareFeet !== undefined && pcs === undefined && boxCount === undefined) {
-        pcs = Math.floor(squareFeet / squareFeetPerBox); // Adjust the calculation
+        pcs = Math.floor(squareFeet / (squareFeetPerBox/ applesPerBox )); // Adjust the calculation
         boxCount = Math.floor(pcs / applesPerBox);
         amount = squareFeet * pricePerSquareFeet;
     } else if (pcs !== undefined && squareFeet === undefined && boxCount === undefined) {
-        squareFeet = pcs * squareFeetPerBox; // Adjust the calculation
+        squareFeet = pcs * ( squareFeetPerBox / applesPerBox); // Adjust the calculation
         boxCount = Math.floor(pcs / applesPerBox);
         amount = squareFeet * pricePerSquareFeet;
     } else {
@@ -130,6 +130,7 @@ function calculateAppleInfo(amount, boxCount, squareFeet, pcs) {
         amount: amount
     };
 }
+
 
 
 
