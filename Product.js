@@ -305,6 +305,6 @@ var ProductList =[
 { name:'	W 2004 BL (8X12)" Wall Tiles Grade A-- Fresh	', sqrfeet:	16.146	, pcs:	25	, amount:	44	},
 { name:'	W 2003 GR (8X12)" Wall Tiles Grade A-- Fresh	', sqrfeet:	16.146	, pcs:	25	, amount:	44	},
 { name:'	W 2000 (8X12)" Wall Tiles Grade A-- Fresh	', sqrfeet:	16.146	, pcs:	25	, amount:	44	},
-
+{ name:'	6PGVT 24 (24x24) Floor Tiles Grade A - Fresh	', sqrfeet:	15.50	, pcs:	4	, amount:	106	},
 
 ];
