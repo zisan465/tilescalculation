@@ -199,7 +199,7 @@ var ProductList =[
 { name:'	P 5006 DBR(12X20)"Wall Tiles - Fresh Grade A	', sqrfeet:	16.146	, pcs:	10	, amount:	84	},
 { name:'	P 5006 LBR(12X20)"Wall Tiles - Fresh Grade A	', sqrfeet:	16.146	, pcs:	10	, amount:	84	},
 { name:'	W 2049 LIV (8X12)"Wall Tiles - Fresh Grade A	', sqrfeet:	16.146	, pcs:	25	, amount:	44	},
-{ name:'	W 2082 R (8X12)"Wall Tiles - Fresh Grade A	', sqrfeet:	16.146	, pcs:	25	, amount:	44	},
+{ name:'	W 2082 R (8X12)"Wall Tiles - Fresh Grade A	', sqrfeet:	16.146	, pcs:	25	, amount:	48	},
 { name:'	WD 1010 HL-2 (10X16)"Wall Tiles - Fresh Grade A	', sqrfeet:	16.146	, pcs:	15	, amount:	62	},
 { name:'	W 1010 DBR (10X16)"Wall Tiles - Fresh Grade A	', sqrfeet:	16.146	, pcs:	15	, amount:	62	},
 { name:'	W 1010 LBR (10X16)"Wall Tiles - Fresh Grade A	', sqrfeet:	16.146	, pcs:	15	, amount:	62	},
